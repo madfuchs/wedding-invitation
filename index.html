@@ -436,6 +436,27 @@
 
 
     <!-- RSVP Start -->
+
+    	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/fRtr3qiq3g3thtoF/",
+				type:"post",
+				data:$("#rsvp").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+    
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
@@ -449,10 +470,10 @@
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
+                                    <input name="full_name" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
+                                    <input name="email" type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -477,7 +498,8 @@
                                 <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" onclick="SubForm()">Submit</button>
+                                
                             </div>
                         </form>
                     </div>
@@ -488,27 +510,8 @@
     <!-- RSVP End -->
 
     <!-- test -->
-<form id="fs-frm" name="basic-rsvp-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
-  <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-    <label for="attending">Will you Attend?</label>
-    <select name="attending" id="attending" required="">
-        <option value="" selected="" disabled="">Select</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-    </select>
-    <label for="plus">And with how many guests?</label>
-    <select name="plus" id="plus" required="">
-        <option value="0" selected="">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-    </select>
-    <input type="hidden" name="_subject" id="email-subject" value="RSVP">
-  </fieldset>
-  <input type="submit" value="RSVP">
-</form>
+
+
 
     <!-- test end -->
 
