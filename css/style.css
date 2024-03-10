@@ -125,6 +125,24 @@
   display: block; /* Makes the span behave like a block element, taking a full line */
 }
 
+.couple-half {
+  position: relative; /* Ensure this is here if not already set to work with positioning */
+  display: inline-block; /* Make sure they are in the same line if they aren't already */
+  vertical-align: top; /* Aligns them nicely at the top */
+}
+
+/* This adds a border to the right side of the first .couple-half */
+.couple-half:first-child {
+  border-right: 2px solid #F14E95; /* Adjust color (#000 is black) and width as needed */
+  padding-right: 10px; /* Adds some space between the border and the content */
+}
+
+/* This ensures there's some space between the two columns */
+.couple-half:last-child {
+  padding-left: 30px;
+}
+
+
 /* end */
 
 body {
@@ -968,14 +986,14 @@ form label {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 }
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 #fh5co-header .display-tc h2,
@@ -1188,7 +1206,7 @@ form label {
   font-size: 30px;
 }
 .couple-half h2 {
-  font-size: 60px;
+  font-size: 40px;
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
