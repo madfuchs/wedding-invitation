@@ -94,7 +94,6 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-8 text-center fh5co-heading animate-box" >
-					<h2>Hello!</h2>
 					<h3>Iunie 22, 2024 Buftea</h3>
 					<h2>Alaturi ne vor fi</h2>
 				</div>
@@ -196,7 +195,7 @@
                 type:"post",
                 data:$("#myForm").serializeArray(),
                 success: function(){
-                    alert("Form Data Submitted :)");
+                    alert("Multumim, va asteptam cu drag!");
                 },
                 error: function(){
                     alert("There was an error :(");
@@ -286,14 +285,6 @@
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
 						<small class="block">Designed by <a>MADFUCHS</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
 				</div>
 			</div>
 
@@ -330,7 +321,7 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+    var d = new Date('2024-06-22T00:00:00');
 
     // default example
     simplyCountdown('.simply-countdown-one', {
@@ -339,6 +330,7 @@
         day: d.getDate()
     });
 
+
     //jQuery example
     $('#simply-countdown-losange').simplyCountdown({
         year: d.getFullYear(),
@@ -346,7 +338,7 @@
         day: d.getDate(),
         enableUtc: false
     });
-</script>
+	</script>
 
 	</body>
 </html>
