@@ -10,6 +10,33 @@
 * 	Template Style 
 *
 * ======================================================= */
+/* newly added code */
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  h1, h2 {
+      font-size: smaller; /* Adjust font size for smaller screens */
+  }
+  .btn-sm {
+      padding: 5px 10px; /* Smaller buttons */
+      font-size: 12px; /* Smaller text on buttons */
+  }
+  .col-md-8.col-md-offset-2 {
+      margin: 0; /* Remove offset on smaller screens */
+      width: 100%; /* Use full width */
+  }
+  .display-t, .display-tc {
+      padding: 20px; /* Add some padding on smaller screens */
+  }
+  .fh5co-cover {
+      padding: 20px; /* Add padding to the cover for smaller screens */
+  }
+}
+/* end */
+
 body {
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
