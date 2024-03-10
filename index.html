@@ -186,40 +186,96 @@
 		</div>
 	</div>
 
-<!-- RSVP -->
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Doriti sa participati?</h2>
-					<p>Va rugam sa completati formularul de mai jos pentru a confirma participarea. Multumim!</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="name" class="sr-only">Nume</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="phone" class="sr-only">Numar Telefon</label>
-								<input type="number" class="form-control" id="phone" placeholder="Numar Telefon">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">Particip</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- RSVP end -->
+<!--RSVP test-->
+    <title>Save Web Form Data to Spreadsheets</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm(){
+            $.ajax({
+                url:"https://api.apispreadsheets.com/data/fRtr3qiq3g3thtoF/", // Make sure to replace this with your actual API endpoint
+                type:"post",
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                    alert("Form Data Submitted :)");
+                },
+                error: function(){
+                    alert("There was an error :(");
+                }
+            });
+        }
+
+        // Show or hide the additional guest name field based on the Additional Guest selection
+        function toggleGuestNameField() {
+            if ($('#additionalGuest').val() === 'yes') {
+                $('#guestNameWrapper').show();
+            } else {
+                $('#guestNameWrapper').hide();
+            }
+        }
+
+        $(document).ready(function() {
+            // Initially hide the guest name field
+            $('#guestNameWrapper').hide();
+        });
+    </script>
+    <div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Doriti sa participati?</h2>
+                    <p>Va rugam sa completati formularul de mai jos pentru a confirma participarea. Multumim!</p>
+                </div>
+            </div>
+            <div class="row animate-box">
+                <div class="col-md-10 col-md-offset-1">
+                    <form id="myForm" class="form-inline" onsubmit="event.preventDefault(); SubForm();">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="form-group">
+                                <label for="full_name" class="sr-only">Nume</label>
+                                <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Nume" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="form-group">
+                                <label for="phone_number" class="sr-only">Numar Telefon</label>
+                                <input type="tel" name="phone_number" class="form-control" id="phone_number" placeholder="Numar Telefon" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="form-group">
+                                <select name="additional_guest" id="additionalGuest" class="form-control" onchange="toggleGuestNameField()" style="color:black;" required>
+                                    <option value="">Veniti cu partener? </option>
+                                    <option value="no">Nu</option>
+                                    <option value="yes">Da</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4" id="guestNameWrapper">
+                            <div class="form-group">
+                                <label for="guest_name" class="sr-only">Numele Invitatului</label>
+                                <input type="text" name="guest_name" class="form-control" id="guest_name" placeholder="Numele Invitatului">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="form-group">
+                                <select name="kid" class="form-control" style="color:black;" required>
+                                    <option value="">Veniti cu copil?</option>
+                                    <option value="no">Nu</option>
+                                    <option value="yes">Da</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <button type="submit" class="btn btn-default btn-block">Particip</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--RSVP test end-->
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
