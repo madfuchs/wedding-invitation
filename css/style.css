@@ -20,6 +20,48 @@
   h1, h2 {
       font-size: smaller; /* Adjust font size for smaller screens */
   }
+
+@media (max-width: 768px) {
+  .fh5co-couple {
+      width: 100%; /* Full width on smaller screens */
+      padding: 10px; /* Less padding on smaller screens */
+  }
+  .fh5co-couple h2, .fh5co-couple p {
+      font-size: 16px; /* Smaller text on smaller screens */
+  }
+}
+
+.fh5co-couple, .fh5co-event, .fh5co-couple * {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+  .parent-names h3, .parent-names h3 span {
+      /* Adjust text sizes, if necessary */
+      font-size: smaller; /* Example adjustment */
+  }
+  .fh5co-couple, .fh5co-event {
+      /* Adjust padding or margins that might be causing spacing issues */
+      padding-bottom: 20px; /* Example adjustment */
+  }
+}
+
+.parent-names {
+  margin-bottom: 20px; /* Increase bottom margin */
+}
+
+.fh5co-couple, .fh5co-event {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Adjust as necessary */
+}
+
+
+
+
+
   .btn-sm {
       padding: 5px 10px; /* Smaller buttons */
       font-size: 12px; /* Smaller text on buttons */
@@ -32,9 +74,31 @@
       padding: 20px; /* Add some padding on smaller screens */
   }
   .fh5co-cover {
-      padding: 20px; /* Add padding to the cover for smaller screens */
+      padding: 0; /* Add padding to the cover for smaller screens */
   }
 }
+
+.desc-groom h2 {
+  text-align: center;
+}
+
+.desc-bride h2 {
+  text-align: center;
+}
+
+.parent-names {
+  text-align: center;
+}
+
+.parent-names h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.parent-names h3 span {
+  display: block; /* Makes the span behave like a block element, taking a full line */
+}
+
 /* end */
 
 body {
@@ -344,7 +408,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 900px;
   }
 }
 .fh5co-cover .display-t,
