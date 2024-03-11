@@ -36,6 +36,14 @@
     background-repeat: no-repeat !important;
   }
 }
+/* For mobile responsiveness */
+@media only screen and (max-width: 320px) {
+  #fh5co-header, #fh5co-couple, #fh5co-event, #fh5co-started {
+    background-position: center 20% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
 
 .row.justify-content-center {
   display: flex;
@@ -86,6 +94,15 @@
       font-size: 16px; /* Smaller text on smaller screens */
   }
 }
+@media only screen and (max-width: 320px) {
+  #fh5co-header, #fh5co-couple, #fh5co-event, #fh5co-started  {
+      width: 100%; /* Full width on smaller screens */
+      padding: 10px; /* Less padding on smaller screens */
+  }
+  .fh5co-couple h2, .fh5co-couple p, .fh5co-event h2, .fh5co-event p {
+      font-size: 16px; /* Smaller text on smaller screens */
+  }
+}
 
 .fh5co-couple, .fh5co-event, .fh5co-couple * {
   margin-bottom: 0;
@@ -105,6 +122,17 @@
 }
 
 @media (max-width: 480px) {
+  .parent-names h3, .parent-names h3 span {
+      /* Adjust text sizes, if necessary */
+      font-size: smaller; /* Example adjustment */
+  }
+  .fh5co-couple, .fh5co-event {
+      /* Adjust padding or margins that might be causing spacing issues */
+      padding-bottom: 20px; /* Example adjustment */
+  }
+}
+
+@media (max-width: 320px) {
   .parent-names h3, .parent-names h3 span {
       /* Adjust text sizes, if necessary */
       font-size: smaller; /* Example adjustment */
