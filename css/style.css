@@ -57,6 +57,16 @@
   }
 }
 
+@media (max-width: 480px) {
+  .fh5co-couple {
+      width: 100%; /* Full width on smaller screens */
+      padding: 10px; /* Less padding on smaller screens */
+  }
+  .fh5co-couple h2, .fh5co-couple p {
+      font-size: 16px; /* Smaller text on smaller screens */
+  }
+}
+
 .fh5co-couple, .fh5co-event, .fh5co-couple * {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -64,6 +74,17 @@
 
 
 @media (max-width: 768px) {
+  .parent-names h3, .parent-names h3 span {
+      /* Adjust text sizes, if necessary */
+      font-size: smaller; /* Example adjustment */
+  }
+  .fh5co-couple, .fh5co-event {
+      /* Adjust padding or margins that might be causing spacing issues */
+      padding-bottom: 20px; /* Example adjustment */
+  }
+}
+
+@media (max-width: 480px) {
   .parent-names h3, .parent-names h3 span {
       /* Adjust text sizes, if necessary */
       font-size: smaller; /* Example adjustment */
