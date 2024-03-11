@@ -1,9 +1,10 @@
 
 TITLE: 
-Wedding - 100% Fully Responsive Free HTML5 Bootstrap Template
+Wedding Invitation
 
 AUTHOR:
-DESIGNED & DEVELOPED by GetTemplates.co
+DEVELOPED by GetTemplates.co
+DESIGNED by MADFUCHS
 
 Website: http://gettemplates.co/
 Twitter: http://twitter.com/gettemplatesco
